@@ -1,0 +1,28 @@
+<template>
+  <div>
+    <sy-Progressbar v-model:percentage=""></sy-Progressbar>
+  </div>
+</template>
+
+<script lang='ts'>
+import { defineComponent, reactive, toRefs, SetupContext } from "vue";
+interface Data {
+  percentage:number
+}
+export default defineComponent({
+  name: "",
+  props: {},
+  components: {},
+  setup(props, ctx: SetupContext) {
+    let data: Data = reactive<Data>({
+      percentage:22.5
+    });
+    return {
+      ...toRefs(data),
+    };
+  },
+});
+</script>
+
+<style scoped lang='scss'>
+</style>

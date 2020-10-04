@@ -1,0 +1,24 @@
+<template>
+  <div>
+    <iframe src="https://www.baidu.com/" class="iframe"></iframe>
+  </div>
+</template>
+
+<script lang='ts'>
+import { defineComponent, reactive, toRefs, SetupContext } from "vue";
+interface Data {}
+export default defineComponent({
+  name: "sy-Iframe",
+  props: {},
+  components: {},
+  setup(props, ctx: SetupContext) {
+    let data: Data = reactive<Data>({});
+    return {
+      ...toRefs(data),
+    };
+  },
+});
+</script>
+
+<style scoped lang='scss'>
+</style>
